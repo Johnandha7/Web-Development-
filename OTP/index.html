@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "poppins",sans-serif;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-top: 190px;
+        }
+        .container{
+            height: 300px;
+            max-width: 300px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #otp span{
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            margin:20px;
+            border: lightblue 15px solid;
+            border-radius: 50%;
+            border-top-color: #f1f1f1;
+            animation: anim 1s linear infinite;
+        }
+        @keyframes anim{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #otp{
+            height: 160px;
+            font-size: 2.4rem;
+            font-weight:bold;
+            margin: 0 auto;
+            color: gray;
+            letter-spacing: 5px;
+            display: grid;
+            place-content: center;
+        }
+        button{
+            width: 90%;
+            padding: 5px 10px;
+            font-size: 1.1rem;
+            border-radius: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>OTP GENERATOR</header>
+    <div id="otp">
+    <img src="lock.jpeg">
+    </div>
+    <button id="btn"  onclick="otpGenerate()">get otp</button>
+    </div>
+    <script src="otp.js"></script>
+    
+</body>
+</html>
